@@ -1,0 +1,5 @@
+<view >
+  <text class="text">问题浏览</text>
+  <view class="problem" wx:for="{{problem_list}}" wx:key="index" bindtap="goTopro" data-id="{{item._id}}" >
+{{item.project_name}}...........................{{item.grade}}</view>
+</view>

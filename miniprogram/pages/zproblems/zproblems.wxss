@@ -1,0 +1,13 @@
+.problem{
+  width: 300px;
+  height: 40px;
+  margin: 10px auto;
+  line-height: 40px;
+  background-color: #5D4870;
+  border-radius: 10px;
+  color:#FAEFFC;
+  text-align: center;
+}
+view{
+  text-align: center;
+}

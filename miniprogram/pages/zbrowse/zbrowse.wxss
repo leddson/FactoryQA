@@ -1,0 +1,5 @@
+textarea{
+  margin:10px auto;
+  background-color:#FAEFFC;
+  border-radius: 5px;
+}

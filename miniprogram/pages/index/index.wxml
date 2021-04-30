@@ -1,0 +1,13 @@
+<!-- <button type="primary" bindtap="getData">获取数据</button>
+<view wx:for="{{obj}}">{{item.project_name}}{{item.grade}}</view>
+<button type="primary" bindtap="addData">添加数据</button>
+
+
+<form bindsubmit="btnSub">
+<input name="project" placeholder="输入项目名称"/>
+<input name="gr" placeholder="输入项目等级"/>
+<button type="primary" form-type="submit"> 提交</button>
+
+<button form-type="reset">重置</button>
+</form>
+<button bindtap="btnNum">获取个数</button> -->

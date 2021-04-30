@@ -1,0 +1,11 @@
+<!-- <view>id:{{id}}</view> -->
+<view>项目名称：{{problem_list.project_name}}</view>
+<view>负责人：{{ problem_list.leader_name}}</view>
+<view>问题类型：{{ problem_list.problem_name}}</view>
+<view>问题描述：{{ problem_list.problem_detail}}</view>
+<view class="img"></view>
+<view>等级：{{ problem_list.grade}}</view>
+<form bindsubmit="formSubmit">
+<view>装备人员回复：<textarea name="reply" placeholder="输入"></textarea></view>
+<button type="primary" form-type="submit">提交</button>
+</form>

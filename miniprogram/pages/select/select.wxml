@@ -1,0 +1,70 @@
+<form bindsubmit="formSubmit" >  
+<view class='box1'>
+<view class='top'>
+  <!-- 负责人姓名要提交给后台 -->
+  <view class='pro-leader'>项目负责人：
+   <view class='leader-name'>
+  <input name="leader_name" value="{{leader_name}}"/>
+   </view>
+  <!-- <view class='pro-leader'> 项目负责人：</view> -->
+</view>
+  <view class='top-selected' bindtap='bindShowMsg'>
+ <!-- 项目名称提交给后台 -->
+    <input name="project_name" value="{{project_name}}"/>
+  </view>
+  <view class="select_box" wx:if="{{select}}">
+    <view wx:for="{{projects}}" >
+      <view class="select_one" bindtap="mySelect" data-name="{{item}}" >{{item}}</view>
+    </view>
+  </view>
+</view>
+  <!-- 第二个下拉菜单 -->
+</view>
+<view class="box11">
+  <view class="top">
+  <view class='top-selected' bindtap='bindShowMsg2'>
+    <!-- 问题名称提交给后台 -->
+    <input name="problem_name" value="{{problem_name}}"/>
+    <view class="drop">
+    </view>
+  </view>
+  <view class="select_box2" wx:if="{{select2}}">
+  <view wx:for="{{problems}}">
+    <view class="select_one" bindtap="mySelect2" data-name="{{item}}">{{item}}</view>
+  </view>
+  </view>
+  </view>
+<!-- 结束 -->
+  </view>
+<view class="box2">
+  <!-- 问题细节提交给后台 -->
+  <textarea name="problem_detail" placeholder="请输入问题描述" text="ture"/>
+</view>
+
+<!-- 图片 -->
+<view class="multipleImg">
+    <view class='upload' wx:for="{{chooseImgs}}" wx:key="index">
+        <!--显示缩略图-->
+        <image src="{{item}}" class="addImg" mode="aspectFill" bindtap="previewImg" data-index='{{index}}' data-item='{{item}}'/>
+        <!--删除-->
+        <image src="/pages/images/deleteImg.png" class="deleteImg" mode="aspectFill" bindtap="deleteImg" data-index='{{index}}' data-item='{{item}}'/>
+    </view>
+
+    <!--上传图片-->
+    <view class='upload' style='display:{{hideAdd?"none":"block"}}'>
+        <image name="image" src='/pages/images/add.png' class="addImg" bindtap="uploadImgs" mode="aspectFill"/>
+    </view>
+</view>
+<!-- 单选按钮 -->
+<view class="box4">  
+  
+<radio-group class="radio" bindChange="updataRadio" name="grade">
+  <label><radio value="加急">加急</radio></label>
+  <label><radio value="一般">一般</radio></label>
+  <label><radio value="撤回">撤回</radio></label>
+  <label><radio value="请求删除">请求删除</radio></label>
+</radio-group>
+</view>
+<!-- 提交目前还没有提交功能 -->
+<button class="submit_btn" form-type="submit" type="primary">确认提交</button>
+</form>

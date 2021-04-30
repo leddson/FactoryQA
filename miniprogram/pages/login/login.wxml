@@ -1,0 +1,3 @@
+<!--pages/login/login.wxml-->
+<view><navigator url="/pages/problems/problems">产线人员登录</navigator></view>
+<view><navigator url="/pages/zproblems/zproblems">装备人员登录</navigator></view>

@@ -1,0 +1,8 @@
+<!--pages/browse/browse.wxml-->
+<view>项目名称：{{problem_list.project_name}}</view>
+<view>负责人：{{ problem_list.leader_name}}</view>
+<view>问题类型：{{ problem_list.problem_name}}</view>
+<view>问题描述：{{ problem_list.problem_detail}}</view>
+<view class="img"></view>
+<view>{{ problem_list.grade}}</view>
+<view>装备人员回复：{{problem_list.reply}}</view>

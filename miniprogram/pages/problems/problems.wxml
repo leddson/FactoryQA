@@ -1,0 +1,8 @@
+<view class="add">
+  <navigator url="/pages/select/select" >+添加问题</navigator>
+</view>
+<view class="adds" >
+  <text>查看解决状态</text>
+  <view class="problem" wx:for="{{problem_list}}" wx:key="index" bindtap="goTopro" data-id="{{item._id}}" >
+{{item.project_name}}...........................{{item.grade}}</view>
+</view>
